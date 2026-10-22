@@ -1,0 +1,114 @@
+{
+  "schema_version": "compact_style_v2",
+  "source_documents": 344,
+  "word_count": {
+    "p10": 11,
+    "median": 31,
+    "p90": 59
+  },
+  "sentence_count": {
+    "median": 3
+  },
+  "paragraph_count": {
+    "median": 2
+  },
+  "first_paragraph_words": {
+    "mean": 12.8692,
+    "median": 12,
+    "p10": 7,
+    "p90": 20
+  },
+  "first_phrase_words": 12,
+  "emoji": {
+    "starts_with_emoji_rate": 0.9855,
+    "per_1000_words": 42.0512,
+    "examples": [
+      "💎",
+      "🔤",
+      "❗️",
+      "⚡️",
+      "✈️",
+      "🎞",
+      "💰",
+      "🌡️"
+    ]
+  },
+  "punctuation_per_1000_chars": {
+    "question_mark": 0.061,
+    "exclamation_mark": 0.1586,
+    "dash": 2.8671,
+    "parentheses": 0.122,
+    "quotation_marks": 2.6231,
+    "question_exclamation": 0
+  },
+  "content_markers": {
+    "documents_with_numbers_rate": 0.5058,
+    "documents_with_dates_rate": 0.1541,
+    "documents_with_money_rate": 0.0785
+  },
+  "observed_openings": [
+    "более 100 рейсов",
+    "отопление в москве",
+    "кишечную палочку нашли",
+    "путин подписал указ",
+    "визовые центры кипра",
+    "концерт канье уэста"
+  ],
+  "repeated_phrases": [
+    "в сторону московского",
+    "сторону московского региона",
+    "сообщил сергей собянин",
+    "на подлёте к",
+    "подлёте к москве",
+    "в сторону московского региона",
+    "на подлёте к москве",
+    "подписчиком москвача через"
+  ],
+  "channel": "moscowach",
+  "signature": {
+    "value": "@domrf_bank",
+    "rate": 0.0029069767441860465
+  },
+  "style_examples": [],
+  "independent_examples_count": 344,
+  "composition_v15": {
+    "short_lead_then_paragraph_rate": 0.6105,
+    "lead_words_median": 12.0,
+    "closing_words_median": 8.0,
+    "quote_start_rate": 0.0,
+    "question_ending_rate": 0.0116,
+    "dash_per_post_mean": 0.666,
+    "quote_per_post_mean": 0.308
+  },
+  "length_v18": {
+    "sample_count": 382,
+    "mean": 33.236,
+    "std": 19.15,
+    "min_words": 14,
+    "max_words": 53,
+    "target_words": 33
+  },
+  "style_v18": {
+    "initial_emoji_rate": 0.9895,
+    "paragraphs_mean": 2.259,
+    "signature_rate": 0.0,
+    "sentence_mean": 2.825
+  },
+  "few_shot_style_examples_v26": [
+    {
+      "text": "🌡️ Теплая сентябрьская погода вернется в Москву уже завтра — в столице потеплеет до +18°C.",
+      "word_count": 14,
+      "purpose": "short_composition"
+    },
+    {
+      "text": "👮‍♂️ Полиция поймала 19-летнего молодого человека, который кинул камень в электричку на МЦД-2 и попал в голову пассажирке.\n\nПо его словам, он не задумался о том, к чему могут привести его действия.",
+      "word_count": 31,
+      "purpose": "typical_composition"
+    },
+    {
+      "text": "📺 Во всех школах России с 2027 года появится единое школьное телевидение, заявил министр просвещения Кравцов.\n\n«Различные фильмы, ролики, интересные детям, необходимые для в том числе обучения, будут показываться после уроков и на переменках. Этот проект стартует в пилотных 15 регионах, и по его результатам уже со следующего года мы планируем реализовать во всех наших школах страны».",
+      "word_count": 56,
+      "purpose": "long_composition"
+    }
+  ]
+}

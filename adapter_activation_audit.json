@@ -1,0 +1,18 @@
+{
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "base_instance_count": 1,
+  "adapters": {
+    "banki_oil": {
+      "active": [
+        "banki_oil"
+      ],
+      "max_logit_delta_vs_base": 0.244140625
+    },
+    "moscowach": {
+      "active": [
+        "moscowach"
+      ],
+      "max_logit_delta_vs_base": 1.46875
+    }
+  }
+}

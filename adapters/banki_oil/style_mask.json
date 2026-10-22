@@ -1,0 +1,110 @@
+{
+  "schema_version": "compact_style_v2",
+  "source_documents": 274,
+  "word_count": {
+    "p10": 9,
+    "median": 27,
+    "p90": 67
+  },
+  "sentence_count": {
+    "median": 3
+  },
+  "paragraph_count": {
+    "median": 1
+  },
+  "first_paragraph_words": {
+    "mean": 27.3467,
+    "median": 23.5,
+    "p10": 9,
+    "p90": 51
+  },
+  "first_phrase_words": 10,
+  "emoji": {
+    "starts_with_emoji_rate": 0.0073,
+    "per_1000_words": 2.1295,
+    "examples": [
+      "❤️",
+      "⏺️",
+      "🇻🇳",
+      "🥗",
+      "🐇",
+      "➡",
+      "🤝",
+      "💰"
+    ]
+  },
+  "punctuation_per_1000_chars": {
+    "question_mark": 0.0727,
+    "exclamation_mark": 0,
+    "dash": 2.486,
+    "parentheses": 0.1454,
+    "quotation_marks": 2.7623,
+    "question_exclamation": 0
+  },
+  "content_markers": {
+    "documents_with_numbers_rate": 0.3942,
+    "documents_with_dates_rate": 0.0401,
+    "documents_with_money_rate": 0.0876
+  },
+  "observed_openings": [
+    "и путин и",
+    "москва под атакой"
+  ],
+  "repeated_phrases": [
+    "в 2025 году",
+    "тысяч рублей за",
+    "в том числе",
+    "по его словам",
+    "путина и трампа",
+    "после атаки беспилотников",
+    "прямо на полу",
+    "со ссылкой на"
+  ],
+  "channel": "banki_oil",
+  "signature": {
+    "value": "@banki_oil",
+    "rate": 0.9452554744525548
+  },
+  "style_examples": [],
+  "independent_examples_count": 274,
+  "composition_v15": {
+    "short_lead_then_paragraph_rate": 0.1314,
+    "lead_words_median": 10.0,
+    "closing_words_median": 11.0,
+    "quote_start_rate": 0.0438,
+    "question_ending_rate": 0.0,
+    "dash_per_post_mean": 0.599,
+    "quote_per_post_mean": 0.339
+  },
+  "length_v18": {
+    "sample_count": 412,
+    "mean": 32.5,
+    "std": 22.166,
+    "min_words": 10,
+    "max_words": 55,
+    "target_words": 32
+  },
+  "style_v18": {
+    "initial_emoji_rate": 0.0073,
+    "paragraphs_mean": 1.206,
+    "signature_rate": 0.9515,
+    "sentence_mean": 2.549
+  },
+  "few_shot_style_examples_v26": [
+    {
+      "text": "Париж превратили в Сектор Газа всего за несколько дней. @banki_oil",
+      "word_count": 11,
+      "purpose": "short_composition"
+    },
+    {
+      "text": "Россия и США обсуждают сотрудничество в сфере дата-центров — глава РФПИ Дмитриев. Cкоро Москва и Вашингтон объявят о новых совместных проектах. «Дизельная сделка — это только начало». @banki_oil",
+      "word_count": 27,
+      "purpose": "typical_composition"
+    },
+    {
+      "text": "До 100 тысяч рублей без процентов можно получить прямо на дебетовую карту WB Банка. «WB КЭШ» позволяет оплачивать покупки в любых магазинах или снимать наличные в банкоматах, а вернуть деньги можно в течение месяца без процентов. Лимит подключается в один клик после оформления карты.\n\nWB банк. Выгодно просто так.\n\nРеклама. ООО \"ВБ БАНК\", ИНН: 0102000578, erid: 2SDnjbpxL3d",
+      "word_count": 57,
+      "purpose": "long_composition"
+    }
+  ]
+}

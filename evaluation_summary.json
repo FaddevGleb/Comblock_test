@@ -1,0 +1,11 @@
+{
+  "validation": {
+    "corpus_bleu": 9.6806,
+    "mean_rougeL_f1": 0.2237,
+    "needs_review_rate": 0.0
+  },
+  "validation_count": 6,
+  "test_needs_review": null,
+  "test_count": 0,
+  "mode": "validation_only"
+}

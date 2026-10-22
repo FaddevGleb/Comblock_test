@@ -1,0 +1,20 @@
+{
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "style_corpus": "data/telegram_news_dataset.jsonl",
+  "test_inputs": "test_inputs.jsonl",
+  "policy": {
+    "semantic_confidence_threshold": 0.85,
+    "style_signature_presence_threshold": 0.8,
+    "validation_only_default": true,
+    "generation": {
+      "max_new_tokens": 256,
+      "num_beams": 1,
+      "do_sample": false,
+      "repetition_penalty": 1.05
+    }
+  },
+  "channels": [
+    {"name": "banki_oil", "supervised": "train_type1.jsonl"},
+    {"name": "moscowach", "supervised": "train_type2.jsonl"}
+  ]
+}

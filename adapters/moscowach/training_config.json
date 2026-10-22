@@ -1,0 +1,16 @@
+{
+  "channel": "moscowach",
+  "rank": 8,
+  "lora_alpha": 16,
+  "target_modules": "all-linear",
+  "adapter_method": "DoRA",
+  "use_dora": true,
+  "attention_modules": [
+    "q_proj",
+    "k_proj",
+    "v_proj",
+    "o_proj"
+  ],
+  "mlp_modules_included": true,
+  "few_shot_style_mask": true
+}
