@@ -1,0 +1,222 @@
+{
+  "seed": 42,
+  "runtime": {
+    "routerai_enabled": false,
+    "heartbeat_seconds": 15
+  },
+  "input_root": "/kaggle/input/datasets/gvfadeev/telegram-style-data",
+  "output_root": "/kaggle/working/telegram-style",
+  "base_model": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "channels_config": "channels.yaml",
+  "experiments_config": "experiments.yaml",
+  "data": {
+    "input_mode": "local_artifacts",
+    "local_artifacts": "local_artifacts",
+    "pair_policy": "user_accepted_no_recheck",
+    "semantic_model": "intfloat/multilingual-e5-small",
+    "semantic_threshold": 0.94,
+    "near_duplicate_threshold": 0.88,
+    "split_original": [
+      0.8,
+      0.1,
+      0.1
+    ],
+    "split_real": [
+      0.68,
+      0.16,
+      0.16
+    ],
+    "cv_folds": 3,
+    "cv_real_pair_threshold": 20
+  },
+  "style": {
+    "min_tokens": 400,
+    "max_tokens": 700,
+    "require_completed_distillation": true,
+    "require_luar": true,
+    "luar_device": "cuda:0",
+    "centroids": 3,
+    "artifact_provenance": "unknown_or_all_corpus"
+  },
+  "api": {
+    "base_url": "https://routerai.ru/api/v1",
+    "key_env": "OPENAI_API_KEY",
+    "neutralizer_model": "~deepseek/deepseek-v4-flash-latest",
+    "expander_model": "~deepseek/deepseek-v4-flash-latest",
+    "expansion_max_tokens": 16384,
+    "verifier_model": "~deepseek/deepseek-v4-flash-latest",
+    "temperature": 0.3,
+    "timeout": 180,
+    "retries": 3,
+    "workers": 4,
+    "enabled": false
+  },
+  "neutralization": {
+    "attempts": 1,
+    "version": "style-lora-neutral-ru-v3-two-stage",
+    "fact_checking": false,
+    "llm_as_judge": false,
+    "response_format": "plain_text"
+  },
+  "language": {
+    "backend": "local",
+    "server_url": null,
+    "ignored_rules": [],
+    "allowed_words": []
+  },
+  "train": {
+    "backend": "trl_peft",
+    "mode": "auto",
+    "epochs": 3,
+    "learning_rate": 5e-05,
+    "lora_r": 8,
+    "lora_alpha": 16,
+    "lora_dropout": 0.05,
+    "target_modules": [
+      "q_proj",
+      "k_proj",
+      "v_proj",
+      "o_proj",
+      "gate_proj",
+      "up_proj",
+      "down_proj"
+    ],
+    "effective_batch_size": 8,
+    "micro_batch_size": 1,
+    "gradient_checkpointing": true,
+    "max_seq_length": "auto",
+    "hard_context_limit": 8192,
+    "attention": "sdpa",
+    "optimizer": "adamw_torch",
+    "early_stopping_patience": 2,
+    "benchmark_steps": 8,
+    "save_total_limit": null
+  },
+  "generation": {
+    "num_candidates": 6,
+    "max_attempts": 2,
+    "max_new_tokens": "auto",
+    "temperature": 0.7,
+    "top_p": 0.8,
+    "repetition_penalty": 1.05,
+    "decoding_grid": [
+      {
+        "temperature": 0.6,
+        "top_p": 0.8,
+        "repetition_penalty": 1.05
+      },
+      {
+        "temperature": 0.8,
+        "top_p": 0.9,
+        "repetition_penalty": 1.05
+      }
+    ]
+  },
+  "reranking": {
+    "weights": {
+      "luar": 0.45,
+      "stylometry": 0.35,
+      "structure": 0.2,
+      "memorization": 0.4
+    },
+    "weight_origin": "preregistered_starting_hypothesis_not_test_tuned",
+    "max_parroting": 0.5
+  },
+  "evaluation": {
+    "test_inputs": "auto",
+    "final_test_independent": false,
+    "checkpoints": "selected",
+    "allow_contaminated_test_reporting": true,
+    "sensitivity": true
+  },
+  "preferences": {
+    "min_events": 32,
+    "calibration_examples": 24
+  },
+  "dpo": {
+    "epochs": 1,
+    "learning_rate": 5e-06,
+    "beta": 0.1,
+    "effective_batch_size": 8
+  },
+  "channels": {
+    "banki_oil": {
+      "originals": {
+        "path": "data/banki_oil/originals.json",
+        "text_field": "text"
+      },
+      "real_pairs": {
+        "path": "data/banki_oil/real_pairs.jsonl",
+        "text_field": "output",
+        "news_field": "input"
+      },
+      "skill": "profiles/banki_oil/skill_full.md",
+      "mask": "profiles/banki_oil/style_mask.md",
+      "mask_metadata": "profiles/banki_oil/style_mask_metadata.json",
+      "fingerprint": "profiles/banki_oil/fingerprint.json",
+      "fingerprints": [
+        "profiles/banki_oil/fingerprint_rus.json",
+        "profiles/banki_oil/fingerprint_wifi_rus.json"
+      ],
+      "luar_model": "models/luar",
+      "signature": "@banki_oil",
+      "structure": {
+        "signature_required": true,
+        "starts_with_emoji": false
+      }
+    },
+    "moscowach": {
+      "originals": {
+        "path": "data/moscowach/originals.json",
+        "text_field": "text"
+      },
+      "real_pairs": {
+        "path": "data/moscowach/real_pairs.jsonl",
+        "text_field": "output",
+        "news_field": "input"
+      },
+      "skill": "profiles/moscowach/skill_full.md",
+      "mask": "profiles/moscowach/style_mask.md",
+      "mask_metadata": "profiles/moscowach/style_mask_metadata.json",
+      "fingerprint": "profiles/moscowach/fingerprint.json",
+      "luar_model": "models/luar",
+      "signature": "",
+      "structure": {
+        "signature_required": false,
+        "starts_with_emoji": true
+      }
+    }
+  },
+  "experiments": {
+    "E1_style": {
+      "kind": "style",
+      "epochs": 3,
+      "learning_rate": 5e-05
+    },
+    "E2_sequential": {
+      "kind": "sequential",
+      "parent": "E1_style",
+      "epochs": 2,
+      "learning_rate": 1e-05,
+      "real_fraction": 0.5
+    },
+    "E3_mixed": {
+      "kind": "mixed",
+      "epochs": 3,
+      "learning_rate": 5e-05,
+      "real_fraction": 0.25
+    }
+  },
+  "optional_experiments": {
+    "E4_rank16": {
+      "kind": "mixed",
+      "lora_r": 16,
+      "lora_alpha": 32,
+      "learning_rate": 5e-05,
+      "real_fraction": 0.5
+    }
+  },
+  "config_path": "/kaggle/working/telegram_style_pipeline/configs/default.yaml",
+  "luar_sha256": "443939bb2df7a31f73890e6013ae20021e1fffed47f6142fe813257e6501e63b"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "gvfadeev/luar-mud-telegram-authorship-holdout-v2",
+  "title": "luar-mud-telegram-authorship-holdout-v2",
+  "code_file": "kaggle_script.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_internet": true,
+  "dataset_sources": [],
+  "competition_sources": [],
+  "kernel_sources": [],
+  "model_sources": [],
+  "enable_tpu": false
+}

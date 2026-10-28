@@ -1,0 +1,95 @@
+{
+  "profile_id": "banki_oil_type1_news_corpus",
+  "channel": "banki_oil",
+  "corpus_kind": "paired_real_news_outputs_only_for_style",
+  "source": "train_type1_real_news.jsonl",
+  "source_sha256": "3891f464271f996ceb413928415501ea31754fd8852c4ba0c81784ae30e7c950",
+  "source_pairs": 25,
+  "generated_utc": "2026-10-26T22:07:06Z",
+  "method": "direct_long_context_skill_then_reverse_short_mask",
+  "generation_backend": "current_codex_model",
+  "external_router_used": false,
+  "external_router_note": "RouterAI credential was not available in the local environment; the same two-pass procedure was performed in the current model context.",
+  "distillation_status": "completed",
+  "skill": {
+    "path": "skill_type1_news_corpus.md",
+    "sha256": "bc84b6562aeadc6097610f72bbb7276e9088c3a7c9f34248be3802e626db7ff9",
+    "qwen3_tokens": 3485
+  },
+  "mask": {
+    "path": "style_mask_type1_news_corpus.md",
+    "sha256": "8c154a2055c158a07ce076e2d38668bef5fde2f5f0b6a0199218561ab576b055",
+    "version": "8c154a2055c1",
+    "qwen3_tokens": 676,
+    "minimum_tokens": 400,
+    "maximum_tokens": 700,
+    "within_budget": true
+  },
+  "tokenizer": {
+    "family": "Qwen/Qwen3-4B-Instruct-2507",
+    "source": "saved SFT adapter tokenizer",
+    "add_special_tokens": false
+  },
+  "stylometry": {
+    "text_field": "output",
+    "service_handles_removed": true,
+    "urls_removed": true,
+    "documents": 25,
+    "words": {
+      "minimum": 30,
+      "q25": 35,
+      "median": 37,
+      "q75": 41,
+      "maximum": 58,
+      "mean": 38.48
+    },
+    "content_words": {
+      "minimum": 25,
+      "q25": 28,
+      "median": 30,
+      "q75": 32,
+      "maximum": 43,
+      "mean": 30.36
+    },
+    "characters": {
+      "minimum": 236,
+      "q25": 273,
+      "median": 287,
+      "q75": 317,
+      "maximum": 412,
+      "mean": 294.68
+    },
+    "sentences": {
+      "minimum": 2,
+      "q25": 3,
+      "median": 3,
+      "q75": 3,
+      "maximum": 3,
+      "mean": 2.88
+    },
+    "opening_sentence_words": {
+      "minimum": 7,
+      "q25": 10,
+      "median": 11,
+      "q75": 13,
+      "maximum": 19,
+      "mean": 11.36
+    },
+    "closing_sentence_words": {
+      "minimum": 7,
+      "q25": 9,
+      "median": 11,
+      "q75": 13,
+      "maximum": 26,
+      "mean": 12.28
+    },
+    "format_counts": {
+      "starts_with_russian_quote": 0,
+      "contains_emoji": 0,
+      "contains_question_mark": 0,
+      "contains_exclamation_mark": 0,
+      "signature_on_same_line_after_final_sentence": 25,
+      "posts_with_blank_line": 1
+    }
+  }
+}

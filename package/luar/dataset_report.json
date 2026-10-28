@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "source": "C:\\Собеседование комблок\\hybrid_solution\\telegram_news_dataset.jsonl",
+  "source_sha256": "8fbd172bf1c0582bfe33a60076c6ba4374991fe681112022f68dabadcfc00aa0",
+  "input_posts": 800,
+  "rejected": {
+    "short_text": 45
+  },
+  "duplicates": {},
+  "dropped_channels": {},
+  "channel_to_author_id": {
+    "banki_oil": 0,
+    "moscowach": 1
+  },
+  "split_mode": "temporal",
+  "embargo_hours": 24,
+  "episode_length": 4,
+  "seed": 42,
+  "counts": {
+    "train": {
+      "moscowach": 250,
+      "banki_oil": 221
+    },
+    "validation": {
+      "moscowach": 35,
+      "banki_oil": 16
+    },
+    "test": {
+      "moscowach": 56,
+      "banki_oil": 59
+    }
+  },
+  "files": {
+    "train.jsonl": {
+      "histories": 2,
+      "posts": 471
+    },
+    "data.jsonl": {
+      "histories": 2,
+      "posts": 471
+    },
+    "validation_queries.jsonl": {
+      "histories": 2,
+      "posts": 26
+    },
+    "validation_targets.jsonl": {
+      "histories": 2,
+      "posts": 25
+    },
+    "test_queries.jsonl": {
+      "histories": 2,
+      "posts": 58
+    },
+    "test_targets.jsonl": {
+      "histories": 2,
+      "posts": 57
+    }
+  },
+  "limitations": [
+    "Channel is a source label, not necessarily an individual author.",
+    "Temporal split measures known-channel performance; it does not measure unseen-channel generalization.",
+    "Topics, named entities, boilerplate and approximate paraphrases can still reveal source identity.",
+    "Do not interpret ROC-AUC as proof that only style was learned."
+  ]
+}

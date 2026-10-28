@@ -1,0 +1,60 @@
+{
+  "distillation_status": "completed",
+  "sha256": "7bf299f99c9c8ccbce9140d5a32551b404b7bc219f12fbcec964a22bbfacc646",
+  "version": "7bf299f99c9c",
+  "tokenizer": "Qwen/Qwen3-4B-Instruct-2507",
+  "tokens": 598,
+  "target_tokens": 600,
+  "source_skill": "C:\\Собеседование комблок\\hybrid_solution\\auto-style-capture\\skills\\moscowach\\skill.md",
+  "report": "C:\\Собеседование комблок\\hybrid_solution\\auto-style-capture\\skills\\moscowach\\compression_20261024T234502221256Z\\report.json",
+  "provenance": "unknown_or_all_corpus",
+  "quality_score": {
+    "ensemble_accuracy": 0.7957328985706309,
+    "ml_accuracy": 0.5914657971412618,
+    "judge_accuracy": 1.0,
+    "runs": [
+      {
+        "run": 1,
+        "ensemble_accuracy": 0.8021120674879922,
+        "ml_accuracy": 0.6042241349759845,
+        "judge_accuracy": 1.0,
+        "dimension_scores": {
+          "overall_authenticity": 1.4,
+          "punctuation": 2.6,
+          "rhetorical_devices": 1.0,
+          "sentence_rhythm": 2.0,
+          "vocabulary": 1.8,
+          "voice_and_tone": 1.4
+        }
+      },
+      {
+        "run": 2,
+        "ensemble_accuracy": 0.7885977925606962,
+        "ml_accuracy": 0.5771955851213924,
+        "judge_accuracy": 1.0,
+        "dimension_scores": {
+          "overall_authenticity": 5.0,
+          "punctuation": 5.0,
+          "rhetorical_devices": 4.6,
+          "sentence_rhythm": 5.0,
+          "vocabulary": 5.0,
+          "voice_and_tone": 5.0
+        }
+      },
+      {
+        "run": 3,
+        "ensemble_accuracy": 0.7964888356632043,
+        "ml_accuracy": 0.5929776713264086,
+        "judge_accuracy": 1.0,
+        "dimension_scores": {
+          "overall_authenticity": 5.0,
+          "punctuation": 5.0,
+          "rhetorical_devices": 4.2,
+          "sentence_rhythm": 5.0,
+          "vocabulary": 5.0,
+          "voice_and_tone": 5.0
+        }
+      }
+    ]
+  }
+}
